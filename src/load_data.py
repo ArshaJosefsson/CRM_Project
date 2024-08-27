@@ -36,8 +36,10 @@ if __name__ == "__main__":
     }
 
     # Connection string for your local PostgreSQL database
-    DB_CONNECTION_STRING = 'postgresql://postgres:postgres@localhost:5432/test_db'
+    # !CHANGE CREDENTIALS!
+    DB_CONNECTION_STRING = 'postgresql://USERNAME:PASSWORD@localhost:5432/crm_db'
 
     # Load each CSV into the corresponding table
+    # !CHANGE PATH!
     for csv_file, table_name in csv_files.items():
-        load_csv_to_postgres(f'C:/Temp/{csv_file}', table_name, DB_CONNECTION_STRING)
+        load_csv_to_postgres(f'C:/path/to/your/csvs/{csv_file}', table_name, DB_CONNECTION_STRING)
