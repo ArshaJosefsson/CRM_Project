@@ -4,12 +4,13 @@ PostgreSQL is employed as the relational database management system (RDBMS) for 
 
 A Python script is provided to facilitate the loading of CSV files into the PostgreSQL database. The script leverages the pandas library for data manipulation and SQLAlchemy for database interaction, enabling seamless bulk data loading into the relevant database tables.
 
------------------------------
+-------------------
 
 **Setup Instructions**
 
 
 **Database Configuration**
+
 Begin by creating a database named crm_db within your local PostgreSQL environment. Tools like Postbird can be used for this purpose.
 
 Modify the database connection string in the index.js file to reflect your local setup. Replace the placeholders with your PostgreSQL username and password:
