@@ -1,73 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRM Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .buttons {
-            margin-bottom: 20px;
-        }
-        .buttons button {
-            margin-right: 10px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>CRM Dashboard</h1>
-        <div class="buttons">
-            <button onclick="fetchData('customers')">Show Customers</button>
-            <button onclick="fetchData('contacts')">Show Contacts</button>
-            <button onclick="fetchData('interactions')">Show Interactions</button>
-            <button onclick="fetchData('products')">Show Products</button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CRM Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('customers-section'); fetchData('customers'); return false;">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('contacts-section'); fetchData('contacts'); return false;">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('interactions-section'); fetchData('interactions'); return false;">Interactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('products-section'); fetchData('products'); return false;">Products</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <table id="data-table">
-            <thead id="table-head"></thead>
-            <tbody id="table-body"></tbody>
-        </table>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">CRM Dashboard</h1>
+            </div>
+        </div>
+
+        <!-- Buttons for Data Fetching -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="btn-group" role="group" aria-label="Data Buttons">
+                    <button type="button" class="btn btn-primary" onclick="fetchData('customers')">Show Customers</button>
+                    <button type="button" class="btn btn-primary" onclick="fetchData('contacts')">Show Contacts</button>
+                    <button type="button" class="btn btn-primary" onclick="fetchData('interactions')">Show Interactions</button>
+                    <button type="button" class="btn btn-primary" onclick="fetchData('products')">Show Products</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customers Section -->
+        <div id="customers-section" class="section">
+            <table class="table table-striped table-bordered">
+                <thead id="customers-table-head"></thead>
+                <tbody id="customers-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Contacts Section -->
+        <div id="contacts-section" class="section">
+            <table class="table table-striped table-bordered">
+                <thead id="contacts-table-head"></thead>
+                <tbody id="contacts-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Interactions Section -->
+        <div id="interactions-section" class="section">
+            <table class="table table-striped table-bordered">
+                <thead id="interactions-table-head"></thead>
+                <tbody id="interactions-table-body"></tbody>
+            </table>
+            <!-- Chart for interaction types -->
+            <canvas id="interactionTypeChart"></canvas>
+        </div>
+
+        <!-- Products Section -->
+        <div id="products-section" class="section">
+            <table class="table table-striped table-bordered">
+                <thead id="products-table-head"></thead>
+                <tbody id="products-table-body"></tbody>
+            </table>
+            <!-- Chart for price range -->
+            <canvas id="priceRangeChart"></canvas>
+        </div>
     </div>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inline Script for Showing Sections and Fetching Data -->
     <script>
+        let currentData = [];
+        let currentSortColumn = '';
+        let currentSortOrder = 'asc';
+        let currentEntity = '';
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
         async function fetchData(entity) {
             const response = await fetch(`/${entity}`);
             const data = await response.json();
-            renderTable(entity, data);
+            currentData = data;
+            currentEntity = entity;
+
+            if (entity === 'customers') {
+                renderTable(entity, data, 'customers-table-head', 'customers-table-body');
+                showSection('customers-section');
+            } else if (entity === 'contacts') {
+                renderTable(entity, data, 'contacts-table-head', 'contacts-table-body');
+                showSection('contacts-section');
+            } else if (entity === 'interactions') {
+                renderTable(entity, data, 'interactions-table-head', 'interactions-table-body');
+                fetchInteractionTypeData(); // Load interaction type chart
+                showSection('interactions-section');
+            } else if (entity === 'products') {
+                renderTable(entity, data, 'products-table-head', 'products-table-body');
+                fetchPriceRangeData(); // Load price range chart
+                showSection('products-section');
+            }
         }
 
-        function renderTable(entity, data) {
-            const tableHead = document.getElementById('table-head');
-            const tableBody = document.getElementById('table-body');
+        function renderTable(entity, data, tableHeadId, tableBodyId) {
+            const tableHead = document.getElementById(tableHeadId);
+            const tableBody = document.getElementById(tableBodyId);
             tableHead.innerHTML = '';
             tableBody.innerHTML = '';
 
             if (data.length === 0) {
-                tableBody.innerHTML = '<tr><td colspan="5">No data available</td></tr>';
+                tableBody.innerHTML = '<tr><td colspan="5" class="text-center">No data available</td></tr>';
                 return;
             }
 
@@ -75,7 +155,7 @@
             const headers = Object.keys(data[0]);
             let headRow = '<tr>';
             headers.forEach(header => {
-                headRow += `<th>${header}</th>`;
+                headRow += `<th onclick="sortTable('${header}')">${header} <span id="sort-${header}"></span></th>`;
             });
             headRow += '</tr>';
             tableHead.innerHTML = headRow;
@@ -90,6 +170,149 @@
                 tableBody.innerHTML += row;
             });
         }
+
+        function sortTable(column) {
+            if (currentSortColumn === column) {
+                currentSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortColumn = column;
+                currentSortOrder = 'asc';
+            }
+
+            const sortedData = currentData.sort((a, b) => {
+                const valueA = a[column];
+                const valueB = b[column];
+
+                // Parse dates if the column is a date field
+                const dateA = new Date(valueA);
+                const dateB = new Date(valueB);
+
+                // Check if the values are valid dates
+                if (!isNaN(dateA) && !isNaN(dateB)) {
+                    if (dateA < dateB) {
+                        return currentSortOrder === 'asc' ? -1 : 1;
+                    }
+                    if (dateA > dateB) {
+                        return currentSortOrder === 'asc' ? 1 : -1;
+                    }
+                } else {
+                    // Fallback to number or string comparison
+                    const numA = parseFloat(valueA);
+                    const numB = parseFloat(valueB);
+
+                    if (!isNaN(numA) && !isNaN(numB)) {
+                        if (numA < numB) {
+                            return currentSortOrder === 'asc' ? -1 : 1;
+                        }
+                        if (numA > numB) {
+                            return currentSortOrder === 'asc' ? 1 : -1;
+                        }
+                    } else {
+                        if (valueA < valueB) {
+                            return currentSortOrder === 'asc' ? -1 : 1;
+                        }
+                        if (valueA > valueB) {
+                            return currentSortOrder === 'asc' ? 1 : -1;
+                        }
+                    }
+                }
+
+                return 0;
+            });
+
+            // Update the table after sorting
+            renderTable(currentEntity, sortedData, `${currentEntity}-table-head`, `${currentEntity}-table-body`);
+            document.getElementById(`sort-${currentSortColumn}`).textContent = currentSortOrder === 'asc' ? '🔼' : '🔽';
+        }
+
+        // Function to create a price range distribution chart
+        async function fetchPriceRangeData() {
+            const response = await fetch('/products');
+            const data = await response.json();
+
+            const priceRanges = [
+                { label: '< $50', min: 0, max: 50 },
+                { label: '$50 - $100', min: 50, max: 100 },
+                { label: '$100 - $200', min: 100, max: 200 },
+                { label: '$200 - $500', min: 200, max: 500 },
+                { label: '$500 - $1000', min: 500, max: 1000 },
+                { label: '> $1000', min: 1000, max: Infinity }
+            ];
+
+            const priceCounts = priceRanges.map(range => {
+                return {
+                    label: range.label,
+                    count: data.filter(product => product.price >= range.min && product.price < range.max).length
+                };
+            });
+
+            const labels = priceCounts.map(range => range.label);
+            const counts = priceCounts.map(range => range.count);
+
+            const ctx = document.getElementById('priceRangeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Number of Products',
+                        data: counts,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Function to create an interaction type distribution chart
+        async function fetchInteractionTypeData() {
+            const response = await fetch('/interactions');
+            const data = await response.json();
+
+            const interactionTypes = ['email', 'phone call', 'meeting'];
+
+            const interactionCounts = interactionTypes.map(type => {
+                return {
+                    label: type,
+                    count: data.filter(interaction => interaction.interaction_type === type).length
+                };
+            });
+
+            const labels = interactionCounts.map(type => type.label);
+            const counts = interactionCounts.map(type => type.count);
+
+            const ctx = document.getElementById('interactionTypeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Number of Interactions',
+                        data: counts,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
     </script>
+
 </body>
+
 </html>
