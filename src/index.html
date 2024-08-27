@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRM Dashboard</h1>
+        <div class="buttons">
+            <button onclick="fetchData('customers')">Show Customers</button>
+            <button onclick="fetchData('contacts')">Show Contacts</button>
+            <button onclick="fetchData('interactions')">Show Interactions</button>
+            <button onclick="fetchData('products')">Show Products</button>
+        </div>
+        <table id="data-table">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <script>
+        async function fetchData(entity) {
+            const response = await fetch(`/${entity}`);
+            const data = await response.json();
+            renderTable(entity, data);
+        }
+
+        function renderTable(entity, data) {
+            const tableHead = document.getElementById('table-head');
+            const tableBody = document.getElementById('table-body');
+            tableHead.innerHTML = '';
+            tableBody.innerHTML = '';
+
+            if (data.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5">No data available</td></tr>';
+                return;
+            }
+
+            // Create table headers dynamically based on the data received
+            const headers = Object.keys(data[0]);
+            let headRow = '<tr>';
+            headers.forEach(header => {
+                headRow += `<th>${header}</th>`;
+            });
+            headRow += '</tr>';
+            tableHead.innerHTML = headRow;
+
+            // Create table rows
+            data.forEach(item => {
+                let row = '<tr>';
+                headers.forEach(header => {
+                    row += `<td>${item[header]}</td>`;
+                });
+                row += '</tr>';
+                tableBody.innerHTML += row;
+            });
+        }
+    </script>
+</body>
+</html>
