@@ -1,0 +1,61 @@
+id,name,description,price,sku,created_at,updated_at
+4,Adjustable Dumbbells,Pair of adjustable dumbbells with weight range from 5 to 50 lbs.,199.99,GYM-DUMB-ADJ-001,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+5,Flat Bench,Heavy-duty flat bench for strength training and weightlifting.,149.99,GYM-BENCH-FLAT-002,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+6,Olympic Barbell,7-foot Olympic barbell with a 1000 lb weight capacity.,229.99,GYM-BARBELL-OLY-003,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+7,Weight Plates Set,"Rubber-coated Olympic weight plates, set of 2, 45 lbs each.",99.99,GYM-PLATES-45LB-004,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+8,Kettlebell Set,Complete kettlebell set with weights ranging from 5 to 50 lbs.,249.99,GYM-KETTLEBELL-SET-005,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+9,Power Rack,Full-size power rack with pull-up bar and weight storage pegs.,499.99,GYM-POWRACK-FULL-006,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+10,Resistance Bands,Set of resistance bands with varying levels of resistance.,29.99,GYM-BANDS-SET-007,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+11,Treadmill,High-performance treadmill with incline and speed settings.,799.99,GYM-TREADMILL-HI-008,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+12,Exercise Bike,Stationary exercise bike with adjustable resistance and digital display.,399.99,GYM-BIKE-STATION-009,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+13,Rowing Machine,Compact rowing machine with adjustable resistance and foldable design.,599.99,GYM-ROWING-MACHINE-010,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+14,Medicine Ball,"Durable medicine ball with textured grip, available in multiple weights.",34.99,GYM-MEDBALL-8LB-011,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+15,Jump Rope,High-speed jump rope with adjustable length and ball bearings.,14.99,GYM-JUMPROPE-ADJ-012,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+16,Foam Roller,High-density foam roller for muscle recovery and massage.,19.99,GYM-FOAMROLLER-HI-013,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+17,Yoga Mat,Non-slip yoga mat with extra thickness for comfort and support.,29.99,GYM-YOGAMAT-THICK-014,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+18,Pull-Up Bar,Wall-mounted pull-up bar with multiple grip positions.,89.99,GYM-PULLUP-WALL-015,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+19,Gymnastic Rings,Adjustable gymnastic rings with sturdy straps for bodyweight training.,39.99,GYM-RINGS-ADJ-016,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+20,Ab Wheel,Double-wheel ab roller for core strengthening exercises.,19.99,GYM-ABWHEEL-DOUBLE-017,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+21,Battle Ropes,Heavy-duty battle ropes for full-body cardio and strength training.,119.99,GYM-BATTLEROPES-HVY-018,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+22,Squat Rack,Compact squat rack with adjustable safety bars and weight storage.,299.99,GYM-SQUATRACK-ADJ-019,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+23,Adjustable Bench,Adjustable weight bench with multiple incline and decline positions.,189.99,GYM-BENCH-ADJ-020,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+24,Leg Press Machine,Leg press machine with adjustable weight resistance and comfortable padding.,1299.99,GYM-LEGPRESS-MACHINE-021,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+25,Cable Machine,Multi-function cable machine with adjustable pulleys and weight stack.,999.99,GYM-CABLE-MACHINE-022,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+26,Hex Dumbbells,"Set of hex dumbbells, rubber-coated, available in multiple weights.",149.99,GYM-HEX-DUMB-023,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+27,Dip Station,Freestanding dip station for tricep and chest exercises.,119.99,GYM-DIPSTATION-FREE-024,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+28,Adjustable Weight Vest,"Weight vest with adjustable weights, ideal for cardio and strength training.",79.99,GYM-WEIGHTVEST-ADJ-025,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+29,Plyo Box,Wooden plyometric box with three different height settings for jump training.,99.99,GYM-PLYOBOX-WOOD-026,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+30,Resistance Tubes,Set of resistance tubes with interchangeable handles and door anchor.,24.99,GYM-RESISTUBE-SET-027,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+31,Smith Machine,Smith machine with linear bearings and adjustable safety stops.,1499.99,GYM-SMITH-MACHINE-028,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+32,Weighted Jump Rope,Heavy-duty jump rope with added weight for advanced cardio training.,24.99,GYM-JUMPROPE-WEIGHT-029,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+33,Speed Ladder,Agility speed ladder for footwork drills and coordination training.,19.99,GYM-SPEEDLADDER-030,2024-08-26 12:55:56.654568,2024-08-26 12:55:56.654568
+34,Elliptical Machine,Smooth and low-impact elliptical machine with multiple resistance levels.,699.99,GYM-ELLIPTICAL-MACH-031,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+35,Adjustable Kettlebell,Space-saving adjustable kettlebell with weight range from 5 to 40 lbs.,139.99,GYM-KETTLEBELL-ADJ-032,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+36,Incline Bench,Incline bench with adjustable angles for upper chest workouts.,179.99,GYM-BENCH-INCLINE-033,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+37,Rubber Flooring Mats,Interlocking rubber flooring mats to protect floors and provide grip.,59.99,GYM-FLOOR-MATS-034,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+38,Weighted Hula Hoop,Weighted hula hoop for core workouts and fat burning.,34.99,GYM-HULAHOOP-WEIGHT-035,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+39,Stability Ball,Anti-burst stability ball for balance training and core exercises.,19.99,GYM-STABBALL-ANTI-036,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+40,Wrist Wraps,Durable wrist wraps for added support during heavy lifting.,14.99,GYM-WRISTWRAP-HEAVY-037,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+41,Weightlifting Belt,Leather weightlifting belt for back support during heavy lifts.,49.99,GYM-LIFTBELT-LEATHER-038,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+42,Adjustable Dip Belt,Dip belt with adjustable chain for adding weights to bodyweight exercises.,29.99,GYM-DIPBELT-ADJ-039,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+43,Smith Machine Combo,Smith machine with integrated weight stack and pulleys.,1799.99,GYM-SMITH-COMBO-040,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+44,Gym Timer,Programmable gym timer with interval settings and countdowns.,89.99,GYM-TIMER-INT-041,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+45,Agility Cones,Set of 10 agility cones for speed and coordination drills.,14.99,GYM-AGILITY-CONES-042,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+46,Parallette Bars,Sturdy parallette bars for bodyweight exercises like L-sits and dips.,39.99,GYM-PARALLETTE-BARS-043,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+47,Massage Gun,Percussive massage gun with multiple attachments for muscle recovery.,199.99,GYM-MASSAGE-GUN-044,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+48,Bumper Plates Set,Set of high-durability bumper plates for Olympic lifting.,249.99,GYM-BUMPER-SET-045,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+49,Vertical Knee Raise Station,"Station for performing vertical knee raises, dips, and pull-ups.",219.99,GYM-VKRS-STATION-046,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+50,Speed Bag,Durable speed bag for boxing training with adjustable platform.,79.99,GYM-SPEED-BAG-047,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+51,Plyometric Box Set,Set of 3 plyometric boxes of different heights for jump training.,149.99,GYM-PLYO-SET-048,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+52,Weighted Vest,Weighted vest with adjustable weights for enhancing workouts.,59.99,GYM-WEIGHTED-VEST-049,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+53,Battle Rope Anchor,Wall-mounted anchor for securely attaching battle ropes.,19.99,GYM-BATTLEROPE-ANCH-050,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+54,Push-Up Bars,Ergonomic push-up bars with padded handles for comfort.,19.99,GYM-PUSHUP-BARS-051,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+55,Sandbag Trainer,Heavy-duty sandbag trainer with adjustable weights for functional training.,79.99,GYM-SANDBAG-TRAIN-052,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+56,Glute Ham Developer,Glute ham developer for hamstring and lower back strength exercises.,599.99,GYM-GLUTE-HAM-053,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+57,Hip Circle Band,Thick resistance band for hip and glute activation exercises.,14.99,GYM-HIPCIRCLE-BAND-054,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+58,Barbell Pad,Barbell pad for added comfort during squats and hip thrusts.,19.99,GYM-BARBELL-PAD-055,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+59,Hex Bar,Hex bar for deadlifts and shrugs with a neutral grip.,169.99,GYM-HEXBAR-056,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+60,Pec Deck Machine,Pec deck machine for isolating chest muscles during workouts.,1299.99,GYM-PECDECK-057,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+61,Tricep Rope,Heavy-duty tricep rope attachment for cable machines.,24.99,GYM-TRICEP-ROPE-058,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+62,Gym Chalk,Block of gym chalk for improving grip during heavy lifts.,9.99,GYM-CHALK-BLOCK-059,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909
+63,Ankle Weights,Pair of adjustable ankle weights for resistance during lower body workouts.,24.99,GYM-ANKLE-WEIGHTS-060,2024-08-26 12:56:12.631909,2024-08-26 12:56:12.631909

@@ -1,0 +1,44 @@
+id,customer_id,contact_id,interaction_type,notes,interaction_date,created_at,updated_at
+1,1,1,email,Discussed contract renewal.,2024-08-01 00:00:00,2024-08-26 12:49:26.429182,2024-08-26 12:49:26.429182
+2,2,2,phone call,Resolved technical issue with product X.,2024-08-05 00:00:00,2024-08-26 12:49:26.429182,2024-08-26 12:49:26.429182
+3,3,3,meeting,Presented new product line.,2024-08-10 00:00:00,2024-08-26 12:49:26.429182,2024-08-26 12:49:26.429182
+44,1,1,email,Initial contact to introduce the new product line.,2024-07-01 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+45,2,2,phone call,Scheduled a product demo for next week.,2024-07-02 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+46,3,3,meeting,In-person meeting to demonstrate the latest features.,2024-07-03 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+47,4,4,email,Follow-up on product demo and sent additional materials.,2024-07-04 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+48,5,5,phone call,Discussed initial feedback from the product demo.,2024-07-05 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+49,6,6,meeting,Negotiation meeting for service package customization.,2024-07-06 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+50,7,7,email,Sent proposal for the customized service package.,2024-07-07 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+51,8,8,phone call,Discussed terms of the contract and pricing.,2024-07-08 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+52,9,9,meeting,Finalized contract terms and signed the agreement.,2024-07-09 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+53,10,10,email,Confirmation of contract signing and next steps.,2024-07-10 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+54,1,1,email,Sent onboarding documents and scheduled implementation.,2024-07-11 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+55,2,2,phone call,Discussed implementation timeline and key milestones.,2024-07-12 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+56,3,3,meeting,Kick-off meeting for project implementation.,2024-07-13 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+57,4,4,email,Provided access to the project management portal.,2024-07-14 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+58,5,5,phone call,Check-in call regarding initial setup.,2024-07-15 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+59,6,6,email,Technical support request about a setup issue.,2024-07-16 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+60,7,7,phone call,Troubleshooting call to resolve setup issues.,2024-07-17 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+61,8,8,meeting,On-site visit to address technical problems.,2024-07-18 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+62,9,9,email,Follow-up after technical visit with resolutions.,2024-07-19 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+63,10,10,phone call,Customer feedback on resolved issues.,2024-07-20 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+64,1,1,email,Shared best practices for using the product effectively.,2024-07-21 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+65,2,2,phone call,Check-in call to discuss usage and satisfaction.,2024-07-22 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+66,3,3,email,Sent quarterly performance report.,2024-07-23 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+67,4,4,meeting,Customer success review meeting.,2024-07-24 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+68,5,5,phone call,Addressed concerns raised during the review meeting.,2024-07-25 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+69,6,6,email,Discussed renewal options for the annual subscription.,2024-07-26 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+70,7,7,phone call,Negotiated terms for subscription renewal.,2024-07-27 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+71,8,8,meeting,Upselling meeting to introduce premium features.,2024-07-28 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+72,9,9,email,Follow-up on upsell proposal and sent detailed offer.,2024-07-29 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+73,10,10,phone call,Customer accepted the upsell offer.,2024-07-30 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+74,1,1,email,Sent customer satisfaction survey.,2024-07-31 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+75,2,2,phone call,Gathered feedback from the survey results.,2024-08-01 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+76,3,3,email,Followed up on specific feedback points.,2024-08-02 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+77,4,4,meeting,In-person feedback session to discuss product improvements.,2024-08-03 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+78,5,5,phone call,Finalized action items from feedback session.,2024-08-04 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+79,6,6,email,Customer requested a custom feature development.,2024-08-05 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+80,7,7,phone call,Discussed scope and timeline for custom project.,2024-08-06 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+81,8,8,meeting,Project kick-off meeting for custom feature.,2024-08-07 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+82,9,9,email,Provided regular updates on project progress.,2024-08-08 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096
+83,10,10,phone call,Final review and handover of the custom feature.,2024-08-09 00:00:00,2024-08-26 13:02:20.699096,2024-08-26 13:02:20.699096

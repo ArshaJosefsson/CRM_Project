@@ -1,0 +1,11 @@
+id,first_name,last_name,email,phone,position,created_at,updated_at
+1,Karin,Svensson,karin.svensson@example.com,0721112233,Purchasing Manager,2024-08-26 12:49:09.619444,2024-08-26 12:49:09.619444
+2,Nils,Johansson,nils.johansson@example.com,0732223344,Technical Lead,2024-08-26 12:49:09.619444,2024-08-26 12:49:09.619444
+3,Sofia,Lindberg,sofia.lindberg@example.com,0723334455,Sales Representative,2024-08-26 12:49:09.619444,2024-08-26 12:49:09.619444
+4,Eva,Larsson,eva.larsson@example.com,0724445566,Operations Manager,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+5,Oskar,Olsson,oskar.olsson@example.com,0735556677,Finance Director,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+6,Sara,Persson,sara.persson@example.com,0726667788,HR Manager,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+7,Fredrik,Eriksson,fredrik.eriksson@example.com,0737778899,IT Specialist,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+8,Lena,Karlsson,lena.karlsson@example.com,0728889900,Marketing Coordinator,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+9,Gustav,Berg,gustav.berg@example.com,0739990011,Logistics Manager,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
+10,Helena,Nilsson,helena.nilsson@example.com,0720001122,Product Manager,2024-08-26 12:59:18.564953,2024-08-26 12:59:18.564953
