@@ -6,8 +6,7 @@ const path = require('path');
 const app = express();
 app.use(bodyParser.json());
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Connect to PostgreSQL
 const sequelize = new Sequelize('crm_db', 'postgres', 'postgres', {
@@ -15,7 +14,6 @@ const sequelize = new Sequelize('crm_db', 'postgres', 'postgres', {
     dialect: 'postgres'
 });
 
-// Define the Contact model
 const Contact = sequelize.define('Contact', {
     first_name: {
         type: DataTypes.STRING(50),
@@ -52,7 +50,6 @@ const Contact = sequelize.define('Contact', {
     timestamps: false
 });
 
-// Define the Customer model
 const Customer = sequelize.define('Customer', {
     first_name: {
         type: DataTypes.STRING,
@@ -71,7 +68,7 @@ const Customer = sequelize.define('Customer', {
         type: DataTypes.STRING,
         allowNull: true
     },
-    contact_id: {  // New field to reference Contact
+    contact_id: {
         type: DataTypes.INTEGER,
         references: {
             model: Contact,
@@ -89,7 +86,6 @@ const Customer = sequelize.define('Customer', {
     timestamps: false
 });
 
-// Define the Interaction model
 const Interaction = sequelize.define('Interaction', {
     customer_id: {
         type: DataTypes.INTEGER,
@@ -135,7 +131,6 @@ const Interaction = sequelize.define('Interaction', {
     timestamps: false
 });
 
-// Define the Product model
 const Product = sequelize.define('Product', {
     name: {
         type: DataTypes.STRING,
@@ -159,17 +154,13 @@ const Product = sequelize.define('Product', {
     timestamps: false
 });
 
-// Sync the models with the database
 sequelize.sync();
 
-// Serve the HTML file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Routes to get data from the database
 
-// Customers
 app.get('/customers', async (req, res) => {
     try {
         const customers = await Customer.findAll();
@@ -179,7 +170,6 @@ app.get('/customers', async (req, res) => {
     }
 });
 
-// Contacts
 app.get('/contacts', async (req, res) => {
     try {
         const contacts = await Contact.findAll();
@@ -190,7 +180,6 @@ app.get('/contacts', async (req, res) => {
     }
 });
 
-// Interactions
 app.get('/interactions', async (req, res) => {
     try {
         const interactions = await Interaction.findAll();
@@ -201,7 +190,6 @@ app.get('/interactions', async (req, res) => {
     }
 });
 
-// Products
 app.get('/products', async (req, res) => {
     try {
         const products = await Product.findAll();
@@ -211,7 +199,6 @@ app.get('/products', async (req, res) => {
     }
 });
 
-// Route to get customer registrations over time for chart
 app.get('/chart-data/customers-over-time', async (req, res) => {
     try {
         const data = await Customer.findAll({
@@ -229,7 +216,6 @@ app.get('/chart-data/customers-over-time', async (req, res) => {
     }
 });
 
-// Route to get product sales for chart (assuming you have sales data)
 app.get('/chart-data/products-sales', async (req, res) => {
     try {
         const data = await Product.findAll({
@@ -244,7 +230,6 @@ app.get('/chart-data/products-sales', async (req, res) => {
     }
 });
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
